@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="br.com.trasmontano.trasmontanoassociadomobile.EmailActivity">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="90dp"
+            android:layout_gravity="top|center"
+            android:background="@drawable/contato_email"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvSetor"
+            android:textSize="18dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:scrollbarSize="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:text="* Nome:"/>
+
+        <EditText
+
+            android:textColor="@color/text_secondary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/etNomeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/etNomeEmail"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/style_edit_text"
+            android:ems="15"
+            android:enabled="true"
+            android:inputType="text"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:text="* Matricula:"/>
+
+                <EditText
+                    android:textColor="@color/text_secondary"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/etMatriculaEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/etNomeEmail"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/style_edit_text"
+                    android:ems="15"
+                    android:maxLength="6"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:text="* Codigo:"/>
+
+                <EditText
+                    android:textColor="@color/text_secondary"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/etCdDependenteEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/etNomeEmail"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/style_edit_text"
+                    android:ems="15"
+                    android:maxLength="2"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:text=""/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:text="Email:"/>
+
+        <EditText
+            android:textColor="@color/text_secondary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/etNomeEmail"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/style_edit_text"
+            android:ems="15"
+            android:enabled="true"
+            android:inputType="textWebEmailAddress"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:text="* Assunto:"/>
+
+        <EditText
+            android:textColor="@color/text_secondary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/etAssuntoEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/etAssuntoEmail"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/style_edit_text"
+            android:ems="15"
+            android:enabled="true"
+            android:inputType="textWebEmailAddress"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:text="* Mensagem:"/>
+
+        <EditText
+            android:textColor="@color/text_secondary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/etMensagemEmail"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:maxLines="6"
+            android:layout_below="@+id/etNomeEmail"
+            android:textAlignment="textStart"
+            android:background="@drawable/style_edit_text"
+            android:ems="15"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:text="Campos com (*) são de preenchimento obrigatório!"/>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imbEnviarEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/send_email"/>
+
+            <ImageButton
+                android:id="@+id/imbLimpar"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/trash"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="br.com.trasmontano.trasmontanoassociadomobile.OrientadorMedico">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Localize um médico, clínica, hospítal ou outro tipo"
+                android:id="@+id/lblTexto1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="de atendimento inserindo as informações nos "
+                android:id="@+id/lblTexto2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="campos correspondentes abaixo:"
+                android:id="@+id/lblTexto3" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textColor="#CC0000"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plano"
+                android:id="@+id/lblPlano" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spnPlano" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textColor="#CC0000"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblRegiao"
+                android:text="Região" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spnRegiao"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#CC0000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMunicipio"
+                android:text="Município:" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spnMunicipio" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#CC0000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblEspecialidade"
+                android:text="*Especialidade:" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spnEspecialidade" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#CC0000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblTipoServico"
+                android:text="Tipo de Serviços:" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spnTipoServico" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_height="0.5dp"
+                android:background="#A9A9A9">
+            </View>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="Utilize este filtro para localizar um credenciado"
+                android:id="@+id/lblTexto4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="desejado de acordo com a categoria do plano: "
+                android:id="@+id/lblTexto5" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tiNomeCnpjFantasia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/edtNomeCnpjFantasia"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="Nome,razão social ou nome fantasia" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tiNumeroCnpj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/edtNumeroCnpj"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="wrap_content"
+                    android:hint="Número CNPJ" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tiConselhoRegional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowColor="#CC0000"
+                android:textColorLink="#CC0000"
+                android:textColorHint="#CC0000"
+                android:textColorHighlight="#CC0000"
+                android:textColor="#CC0000"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/edtConselhoRegional"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#CC0000"
+                    android:textColorLink="#CC0000"
+                    android:textColorHint="#CC0000"
+                    android:textColorHighlight="#CC0000"
+                    android:textColor="#CC0000"
+                    android:hint="Número Conselho Regional" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesquisar"
+                    android:background="@drawable/style_button_red"
+                    android:textColor="#fff"
+                    android:id="@+id/btPesquisar"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/style_button_red"
+                    android:textColor="#fff"
+                    android:text="Voltar"
+                    android:id="@+id/btVoltar"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

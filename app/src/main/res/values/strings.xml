@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Trasmontano Saúde</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="txtAbrirCamera">Abrir a Camera</string>
+    <string name="action_settings">Central de Atendimento</string>
+    <string name="btLogin">Login</string>
+    <string name="txtUsuario">Usuario</string>
+    <string name="txtSenha">Senha</string>
+    <string name="txtEntrar">Entrar</string>
+    <string name="txtCadastrar_se">Cadastre-se agora!</string>
+    <string name="txtCadastrar">Cadastrar</string>
+    <string name="txtLogin">Trasmontano</string>
+    <string name="txtTirarFoto">Tirar foto</string>
+    <string name="txtMatricula">Matricula</string>
+    <string name="txtCpf">CPF</string>
+    <string name="txtDataDeNascimento">Data de Nascimento</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtRepetirEmail">Repetir Email</string>
+    <string name="txtRepetirSenha">Repetir Senha</string>
+    <string name="txtLembrarSenha">Lembrar Senha</string>
+    <string name="title_activity_main_logado">MainLogadoActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="horaIntervalo">08:00</string>
+    <string name="title_activity_maps_inicio">Map</string>
+
+
+    <string name="menu_central_atendimento">Central de Atendimento</string>
+    <string name="menu_carteirinha_virtual">Carteirinha Virtual</string>
+    <string name="menu_agendamento_consulta">Agendamento de Consulta</string>
+    <string name="menu_alarme_medicamentos">Alarme de Medicamentos</string>
+    <string name="title_activity_maps_activity_rede_credenciada">Map</string>
+    <string name="padr_o_nacional_de_qualidade">Padrão nacional de qualidade</string>
+    <string name="alpac">ALPAC</string>
+
+</resources>

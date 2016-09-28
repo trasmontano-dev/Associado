@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/padlock"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/flag"
+            android:title="Unidades" />
+        <item
+            android:id="@+id/nav_agendamentoConsulta"
+            android:icon="@drawable/hospital"
+            android:title="Agendamento de Consulta" />
+        <item
+            android:id="@+id/nav_centralAtendimento"
+            android:icon="@drawable/ic_setting_dark"
+            android:title="Central de Atendimento" />
+
+
+    </group>
+
+    <item android:title="Trasmontano">
+        <menu>
+            <item
+                android:id="@+id/nav_alarme_medicamentos"
+                android:icon="@drawable/bell"
+                android:title="Alarme de Medicamentos" />
+            <item
+                android:id="@+id/nav_carteirinha_sem_logar"
+                android:icon="@drawable/frame"
+                android:title="Carteirinha Virtual" />
+        </menu>
+    </item>
+
+</menu>

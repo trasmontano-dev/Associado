@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:paddingBottom="30dp"
+        android:orientation="vertical"
+        tools:context="br.com.trasmontano.trasmontanoassociadomobile.CadastarActivity">
+
+        <ImageButton
+            android:id="@+id/btAbrirCamera"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            android:layout_gravity="left"
+            android:src="@drawable/photo_camera"
+            android:text="@string/txtAbrirCamera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/txtTirarFoto"
+            android:textColor="@color/colorAccent" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imagem"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="10" />
+
+        <!--<ImageView
+            android:id="@+id/imagem"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/avatar" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/primary_text_dark" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tiMatricula"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                android:hint="@string/txtMatricula"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtCpf"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/tiDataNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/etCustoMedio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:hint="@string/txtDataDeNascimento"
+                    android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imbData"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/editText"
+                android:layout_toRightOf="@+id/editText"
+                android:contentDescription="fdsfsadfas"
+                android:background="@drawable/calendar"
+                android:layout_weight="1"
+                android:cropToPadding="true"
+                android:src="@android:drawable/ic_menu_my_calendar" />
+
+        </LinearLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtEmail"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiConfirmaEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etConfirmaEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtRepetirEmail"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtSenha"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiRepetirSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etRepetirSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtRepetirSenha"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiLembrarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etLembrarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:hint="@string/txtLembrarSenha" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--<Button
+            android:id="@+id/btCadastrarAssociado"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="@string/txtCadastrar"
+             />-->
+
+        <Button
+            android:id="@+id/btCadastrarAssociado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/txtCadastrar"
+            android:textColor="@color/icons" />
+
+
+    </LinearLayout>
+</ScrollView>

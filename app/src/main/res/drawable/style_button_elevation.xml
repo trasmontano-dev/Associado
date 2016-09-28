@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- SHADOW -->
+            <item>
+                <shape>
+                    <solid android:color="@color/white" />
+                    <!-- alttan gölge -->
+                    <corners android:radius="1000dp" />
+                </shape>
+            </item>
+            <!-- BUTTON alttan gölge android:right="5px" to make it round-->
+            <item android:bottom="5px">
+                <shape>
+                    />
+                    <stroke android:width="6px" android:color="@color/colorPrimaryDark" />
+                    <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp" />
+                    <corners android:radius="1000dp" />
+                    <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>            <!-- SHADOW -->
+            <item>
+                <shape>
+                    <solid android:color="@color/colorPrimary" />
+                    <corners android:radius="1000dp" />
+                </shape>
+            </item>            <!-- BUTTON -->
+            <item android:bottom="5px">
+                <shape>/>
+                    <corners android:radius="1000dp" />
+                    <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.trasmontano.trasmontanoassociadomobile">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+     <application
+        android:name=".PDVAplication"
+        android:allowBackup="true"
+
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+
+
+    </application>
+    -->
+    <application
+        android:name=".PDVAplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivitySplash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD-4ipIOOpJ4aNXYUniq2y0_cXGbULqFQg" />
+
+        <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true" />
+
+        <activity android:name=".CadastarActivity" />
+        <activity android:name=".ListAssociadoActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainLogadoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CarteirinhaActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+        <activity
+            android:name=".CarteirinhaEmpresarialFrenteFragment"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CarteirinhaEmpresariaVersolFragment"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".CarteirinhaPessoaFisicaFrenteFragment" />
+        -->
+        <activity
+            android:name=".ListAlarmeActivity"
+            android:label="Alarme" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="Mapa" />
+
+        <!--
+        <receiver android:name=".AlarmeBroadcastReceiver" >
+        </receiver>
+        -->
+
+        <receiver android:name=".AlarmeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="br.com.trasmontano.trasmontanoassociadomobile.ALARME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".AlarmeService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".CadastrarAlarmeActivity"
+            android:label="Alarme de Medicamento"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MensagemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListLogAlarmeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListAgendamentoConsultaActivity"
+            android:label="Consultas Agendadas" />
+        <activity
+            android:name=".AgendamentoDeConsultaActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListConsultaActivity"
+            android:label="Agendamento de Consulta" />
+        <activity
+            android:name=".OrientadorMedico"
+            android:label="Rede Credenciada" />
+        <activity android:name=".RedeCredenciadaActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".CentralDeAtendimentoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EmailActivity"
+            android:label="Email" />
+        The API key for Google Maps-based APIs is defined as a string resource.
+        (See the file "res/values/google_maps_api.xml").
+        Note that the API key is linked to the encryption key used to sign the APK.
+        You need a different API key for each encryption key, including the release key that is used
+        to
+        sign the APK for publishing.
+        You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD-4ipIOOpJ4aNXYUniq2y0_cXGbULqFQg" />
+
+        <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true" />
+
+        <activity android:name=".OrientadorMedicoInformacoes" />
+        <activity android:name=".ListEmergenciaActivity" />
+        <activity android:name=".UnidadesActivity" />
+        <activity android:name=".UnidadesDetalhesActivity"></activity>
+    </application>
+
+</manifest>

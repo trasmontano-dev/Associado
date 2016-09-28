@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="br.com.trasmontano.trasmontanoassociadomobile.CadastrarAlarmeActivity">
+
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/medicamento" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/primary_text_dark" />
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiNomePaciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etNomePaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Paciente"
+                android:inputType="textCapWords"
+                android:maxLength="30" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiNomeMedicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etNomeMedicamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Medicamento"
+                android:inputType="textCapWords"
+                android:maxLength="15" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusableInTouchMode="true"
+            android:id="@+id/tiDescricaoMedicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etDescricaoMedicamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descrição do Medicamento"
+                android:inputType="textCapWords"
+                android:maxLength="15" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:background="@color/white"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:spinnerMode="dialog" />
+
+               <!-- <Spinner
+                    style="@style/spinner_style"
+                    android:foregroundTint="@color/black"
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Qtd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text" />
+
+                    <EditText
+                        android:id="@+id/etQuantidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layDataInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/tiDataInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/etDataInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data Inicio"
+                    android:maxLength="15"
+                    android:enabled="true"
+                    android:focusable="false" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imbDataInicio"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.3"
+                android:background="@drawable/calendar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layHoraInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/tiHoraInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/etHoraInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Hora Inicio"
+                    android:maxLength="15"
+                    android:enabled="true"
+                    android:focusable="false" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imbHoraInicio"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.3"
+                android:background="@drawable/calendar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layIntervaloDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/tiIntervaloDe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/etIntervaloDe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Intervalo De (horas)"
+                    android:maxLength="15"
+                    android:text="08:00"
+                    android:focusable="false"
+                    android:enabled="true"
+                    android:focusableInTouchMode="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imbIntervaloDe"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.3"
+                android:background="@drawable/calendar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnMp3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/tiMp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/etMp3"
+                    android:focusable="false"
+                    android:enabled="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Música Alarme"
+                    android:inputType="textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/imbMp3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.2"
+                android:background="@drawable/alarme" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <net.colindodd.toggleimagebutton.ToggleImageButton xmlns:tib="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/timbSound"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:checked="true"
+                android:gravity="right"
+                tib:tib_drawable_off="@drawable/not_sound"
+                tib:tib_drawable_on="@drawable/sound" />
+
+            <net.colindodd.toggleimagebutton.ToggleImageButton xmlns:tib="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/timbVibration"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="15dp"
+                android:checked="true"
+                android:gravity="right"
+                tib:tib_drawable_off="@drawable/not_vibration"
+                tib:tib_drawable_on="@drawable/vibration" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btCadastrarAlarme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Cadastrar"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

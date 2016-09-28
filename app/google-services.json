@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1000588784753",
+    "firebase_url": "https://trasmontanoassociado-9613c.firebaseio.com",
+    "project_id": "trasmontanoassociado-9613c",
+    "storage_bucket": "trasmontanoassociado-9613c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000588784753:android:85ae5230ac0d32e9",
+        "android_client_info": {
+          "package_name": "br.com.trasmontano.firebaseteste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000588784753-d86l008o655d9sqlcehpqnjgvs3lm45v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_oC0fh3qH0-AlN46Z9Grkwk7VJg18S9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000588784753:android:496856b53e3df0aa",
+        "android_client_info": {
+          "package_name": "br.com.trasmontano.trasmontanoassociadomobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000588784753-d86l008o655d9sqlcehpqnjgvs3lm45v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_oC0fh3qH0-AlN46Z9Grkwk7VJg18S9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

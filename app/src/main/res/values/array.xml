@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fan_labels">
+        <item>@string/menu_central_atendimento</item>
+        <item>@string/menu_alarme_medicamentos</item>
+        <item>@string/menu_carteirinha_virtual</item>
+        <item>@string/menu_agendamento_consulta</item>
+    </string-array>
+    <integer-array name="button_colors">
+        <item>@color/red_1</item>
+        <item>@color/red_2</item>
+        <item>@color/red_3</item>
+        <item>@color/red_4</item>
+    </integer-array>
+    <array name="button_icons">
+        <item>@drawable/flag</item>
+        <item>@drawable/bell</item>
+        <item>@drawable/frame</item>
+        <item>@drawable/hospital</item>
+
+    </array>
+</resources>

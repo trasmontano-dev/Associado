@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="@color/Background.CardView"
+        card_view:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.sackcentury.shinebuttonlib.ShineButton
+                android:id="@+id/shineButtonFavoritos"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@android:color/darker_gray"
+                app:allow_random_color="false"
+                app:big_shine_color="#696969"
+                app:btn_color="#696969"
+                app:btn_fill_color="#006400"
+                app:click_animation_duration="200"
+                app:enable_flashing="false"
+                app:shine_animation_duration="1500"
+                app:shine_count="13"
+                app:shine_distance_multiple="1.5"
+                app:shine_turn_angle="10"
+                app:siShape="@raw/star"
+                app:small_shine_color="#CC9999"
+                app:small_shine_offset_angle="20" />
+
+
+            <TextView
+                android:id="@+id/tvNomeFantasia"
+                style="@style/TextView.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/Margin.Standard"
+                android:text="Hospital Igesp"
+                android:textSize="23dp" />
+
+
+            <View style="@style/Divider.Horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/Margin.Standard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Endereço: " />
+
+                    <TextView
+                        android:id="@+id/tvEndereco"
+                        style="@style/TextView.Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rua Nossa Senhora do Rosario, 865" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bairro: " />
+
+                    <TextView
+                        android:id="@+id/tvBairro"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     BELA VISTA" />
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Cidade: " />
+
+                    <TextView
+                        android:id="@+id/tvCidade"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SÂO PAULO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estado: " />
+
+                    <TextView
+                        android:id="@+id/tvEstado"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    SP" />
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Cep: " />
+
+                    <TextView
+                        android:id="@+id/tvCep"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="06190-010" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telefone: " />
+
+                    <TextView
+                        android:id="@+id/tvTelefone"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  11 36812469" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telefone1: " />
+
+                    <TextView
+                        android:id="@+id/tvTelefone1"
+                        style="@style/TextView.Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11 985177375" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLatitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-23.552966"
+                        android:textSize="2sp" />
+
+                    <TextView
+                        android:id="@+id/tvLongitude"
+                        android:textSize="2sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-46.630032"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:id="@+id/tvCodigoCredenciado"
+                        android:textSize="2sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1638" />
+                    <TextView
+                        android:id="@+id/tvCodigoFilial"
+                        android:textSize="2sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                    <TextView
+                        android:id="@+id/tvMatricula"
+                        android:textSize="2sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="554020" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View style="@style/Divider.Horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btComoChegar"
+                    style="@style/DeleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    android:text="Como Chegar" />
+
+                <Button
+                    android:id="@+id/btLigar"
+                    style="@style/DeleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="50dp"
+                    android:background="@android:color/transparent"
+                    android:text="Ligar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.trasmontano.trasmontanoassociadomobile.UnidadesDetalhesActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_vertical"
+        android:fillViewport="false">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unidade"
+                    android:id="@+id/twTextView1"
+                    android:width="100dp"
+                    android:textAlignment="textStart"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unidade"
+                    android:id="@+id/twUnidade"
+                    android:layout_toRightOf="@+id/twTextView1"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Endereço"
+                    android:id="@+id/twTextView2"
+                    android:width="60dp"
+                    android:textAlignment="textStart"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:layout_width="@dimen/fab_margin"
+                    android:layout_height="wrap_content"
+                    android:text="Endereco"
+                    android:id="@+id/twEndereco"
+                    android:layout_toRightOf="@+id/twTextView2"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bairro"
+                    android:id="@+id/twTextView3"
+                    android:width="60dp"
+                    android:textAlignment="textStart"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bairro"
+                    android:id="@+id/twBairro"
+                    android:layout_toRightOf="@+id/twTextView2"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cidade"
+                    android:id="@+id/twTextView4"
+                    android:width="60dp"
+                    android:textAlignment="textStart"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cidade"
+                    android:id="@+id/twCidade"
+                    android:layout_toRightOf="@+id/twTextView4"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cep"
+                    android:id="@+id/twTextView5"
+                    android:width="60dp"
+                    android:textAlignment="textStart"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08061-430"
+                    android:id="@+id/twCep"
+                    android:layout_toRightOf="@+id/twTextView5"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"/>
+
+            </TableRow>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btVerMapa"
+                    android:background="@drawable/style_button_elevation"
+                    android:drawableTop="@drawable/map_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Ver no Mapa" />
+
+                <Button
+                    android:id="@+id/btRota"
+                    android:background="@drawable/style_button_elevation"
+                    android:drawableTop="@drawable/maps_icon_comchegar2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Criar uma Rota"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

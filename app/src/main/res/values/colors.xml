@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#A52A2A</color>
+    <color name="colorPrimaryDark">#B22222</color>
+    <color name="primary_light">#e2bfac</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#727272</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">@color/white</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="branca">@android:color/white</color>
+    <color name="amarelo">#FFD700</color>
+    <color name="colorCard">#F5F5F5</color>
+    <color name="colorAzul">#104E8B</color>
+
+    <color name="red_1">#C2185B</color>
+    <color name="red_2">#E91E63</color>
+    <color name="red_3">#F44336</color>
+    <color name="red_4">#FF5722</color>
+
+
+    <color name="Background">@color/TextColor.White</color>
+
+    <color name="Background.CardView">#DDDDDD</color>
+
+    <color name="TextColor.White">#FFFFFF</color>
+    <color name="TextColor.Gray">#999999</color>
+    <color name="TextColor.DarkGray">#333333</color>
+    <color name="TextColor.Black">#000000</color>
+
+    <color name="Divider">#333333</color>
+
+
+</resources>
