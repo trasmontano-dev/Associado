@@ -11,8 +11,9 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".70"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:background="@drawable/tras_logo_small"
         android:id="@+id/imageView" />
