@@ -2,13 +2,22 @@ package br.com.trasmontano.trasmontanoassociadomobile.network;
 
 import java.util.List;
 
-import br.com.trasmontano.trasmontanoassociadomobile.DTO.*;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.AgendaMedicaAssociado;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.AgendamentoMedicoWebParametros;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.Associado;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.DTOParametrosOrientador;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.DadosCarteirinha;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.DadosConsulta;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.EmailCanalAtendimento;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.Emergencia;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.Login;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.OrientadorMedicoDTO;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.OrientadorMedicoDTOPesquisa;
+import br.com.trasmontano.trasmontanoassociadomobile.DTO.UnidadeMedica;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
 import retrofit.http.Body;
-import retrofit.http.Field;
-import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
 import retrofit.http.Header;
 import retrofit.http.POST;
@@ -222,6 +231,13 @@ public class APIClient {
                 @Header("matricula") String matricula ,
                 @Header("credenciadosFavoritos") String credenciadosFavoritos,
                 Callback<List<Emergencia>> callbackFavoritos
+        );
+        @GET("/associado/especialidadesOrientadorWebApiMobile/{codigoCredenciado}/{codigoFilial}/{cdDescricao}")
+        void especialidadesOrientadorWebApiMobile(
+            @Path("codigoCredenciado") int codigoCredenciado ,
+            @Path("codigoFilial") int codigoFilial ,
+            @Path("cdDescricao") int cdDescricao,
+                Callback<List<String>> callbackEspecialidadesOrientadorWebApiMobile
         );
     }
 }

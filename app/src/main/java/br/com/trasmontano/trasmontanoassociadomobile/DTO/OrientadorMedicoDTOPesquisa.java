@@ -50,6 +50,7 @@ public class OrientadorMedicoDTOPesquisa implements Serializable {
     private int Restricao;
     private String Latitude;
     private String Longitude;
+    private String Email;
 
     public int getCodigoCredenciado() {
         return CodigoCredenciado;
@@ -401,5 +402,13 @@ public class OrientadorMedicoDTOPesquisa implements Serializable {
 
     public void setLongitude(String longitude) {
         Longitude = longitude;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }

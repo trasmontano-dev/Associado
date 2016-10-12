@@ -29,7 +29,7 @@ import retrofit.client.Response;
 
 public class OrientadorMedico extends AppCompatActivity implements Serializable {
 
-    private Callback<List<OrientadorMedicoDTO>> callbackDescricaoPlanos;
+        private Callback<List<OrientadorMedicoDTO>> callbackDescricaoPlanos;
 
     private Callback<List<OrientadorMedicoDTO>> callbackDescricaoDasRegioes;
 
@@ -290,6 +290,7 @@ public class OrientadorMedico extends AppCompatActivity implements Serializable 
                 dtoParametrosOrientador.setcNPJCPF(edtNumeroCnpj.getText().toString());
                 dtoParametrosOrientador.setcRM(edtNumeroConselhoRegional.getText().toString());
                 dtoParametrosOrientador.setOrdem("2");
+                dtoParametrosOrientador.setCdCategoria(codPlano);
 
                 configurecallbackOrientadorMedicoMobile();
                 new APIClient().getRestService().getGridOrientadorMedicoMobile(dtoParametrosOrientador,callbackOrientadorMedicoMobile);

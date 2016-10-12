@@ -49,6 +49,7 @@ public class RedeCredenciadaActivity extends AppCompatActivity implements Serial
     private LocationRequest mLocationRequest;
     private double longitudeAtual = 0.0;
     private double latitudeAtual = 0.0;
+    private String cdDescricao;
     GoogleMap mMap;
 
     @Override
@@ -71,6 +72,7 @@ public class RedeCredenciadaActivity extends AppCompatActivity implements Serial
 
         overridePendingTransition(R.anim.slide_esquerda, R.anim.slide_direita);
         ArrayList<OrientadorMedicoDTOPesquisa> lstPesquisa = (ArrayList<OrientadorMedicoDTOPesquisa>) getIntent().getSerializableExtra("redeCredenciada");
+        cdDescricao = lstPesquisa.get(0).getCdCategoria().toString();
         ArrayList pesquisa = new ArrayList();
         for (OrientadorMedicoDTOPesquisa dto : lstPesquisa) {
             pesquisa.add(dto);
@@ -222,6 +224,8 @@ public class RedeCredenciadaActivity extends AppCompatActivity implements Serial
                 TextView tvNomeFantasia = (TextView)view.findViewById(R.id.tvNomeFantasia);
                 TextView tvTipoCredenciado = (TextView)view.findViewById(R.id.tvTipoCredenciado);
                 TextView tvCnpjCpf = (TextView)view.findViewById(R.id.tvCnpjCpf);
+                TextView tvSite = (TextView)view.findViewById(R.id.tvSite);
+                TextView tvEmail = (TextView)view.findViewById(R.id.tvEmail);
 
                 conteudo.add(0,tvCodigoCredenciado.getText().toString());
                 conteudo.add(1,tvCodigoFilial.getText().toString());
@@ -229,9 +233,13 @@ public class RedeCredenciadaActivity extends AppCompatActivity implements Serial
                 conteudo.add(3,tvNomeFantasia.getText().toString());
                 conteudo.add(4,tvTipoCredenciado.getText().toString());
                 conteudo.add(5,tvCnpjCpf.getText().toString());
+                conteudo.add(6,cdDescricao);
+                conteudo.add(7,tvSite.getText().toString());
+                conteudo.add(8,tvEmail.getText().toString());
+
                 Bundle b = new Bundle();
                 b.putSerializable("informacao",conteudo);
-                Intent i = new Intent(RedeCredenciadaActivity.this,OrientadorMedicoInformacoes.class);
+                Intent i = new Intent(RedeCredenciadaActivity.this,RedeCredenciadaOrientadorInf.class);
                 i.putExtras(b);
                 startActivity(i);
                 //Toast.makeText(RedeCredenciadaActivity.this, "Info", Toast.LENGTH_LONG).show();

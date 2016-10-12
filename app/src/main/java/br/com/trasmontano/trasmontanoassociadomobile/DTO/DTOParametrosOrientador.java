@@ -28,6 +28,8 @@ public class DTOParametrosOrientador implements Serializable {
     private String cNPJCPF;
     @SerializedName("cRM")
     private String cRM;
+    @SerializedName("cdCategoria")
+    private String cdCategoria;
 
     public String getRegiao() {
         return regiao;
@@ -107,5 +109,13 @@ public class DTOParametrosOrientador implements Serializable {
 
     public void setcRM(String cRM) {
         this.cRM = cRM;
+    }
+
+    public String getCdCategoria() {
+        return cdCategoria;
+    }
+
+    public void setCdCategoria(String cdCategoria) {
+        this.cdCategoria = cdCategoria;
     }
 }

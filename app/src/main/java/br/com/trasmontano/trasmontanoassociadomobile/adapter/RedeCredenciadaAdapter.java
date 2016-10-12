@@ -62,6 +62,7 @@ public class RedeCredenciadaAdapter extends RecyclerView.Adapter<RedeCredenciada
         holder.tiLatitude.setText(r.getLatitude());
         holder.tiLongitude.setText(r.getLongitude());
         holder.tiCnpjCpf.setText(r.getCNPJ());
+        holder.tiEmail.setText(r.getEmail());
 
         //if (r.getCaminhoImagem() != null) {
         //    File file = new File(r.getCaminhoImagem());
@@ -116,6 +117,7 @@ public class RedeCredenciadaAdapter extends RecyclerView.Adapter<RedeCredenciada
         TextView tiLatitude;
         TextView tiLongitude;
         TextView tiCnpjCpf;
+        TextView tiEmail;
         private View view;
 
         public RedeCredenciadaViewHolder(View view) {
@@ -139,6 +141,7 @@ public class RedeCredenciadaAdapter extends RecyclerView.Adapter<RedeCredenciada
             this.tiLatitude = (TextView)view.findViewById(R.id.tvLatitude);
             this.tiLongitude = (TextView)view.findViewById(R.id.tvLongitude);
             this.tiCnpjCpf = (TextView)view.findViewById(R.id.tvCnpjCpf);
+            this.tiEmail = (TextView)view.findViewById(R.id.tvEmail);
         }
     }
 }

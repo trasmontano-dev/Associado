@@ -178,7 +178,11 @@
         <activity android:name=".OrientadorMedicoInformacoes" />
         <activity android:name=".ListEmergenciaActivity" />
         <activity android:name=".UnidadesActivity" />
-        <activity android:name=".UnidadesDetalhesActivity"></activity>
+        <activity android:name=".UnidadesDetalhesActivity" />
+        <activity
+            android:name=".RedeCredenciadaOrientadorInf"
+            android:label="@string/title_activity_rede_credenciada_orientador_inf"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
