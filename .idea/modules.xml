@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TrasmontanoAssociadoMobileNovo.iml" filepath="$PROJECT_DIR$/TrasmontanoAssociadoMobileNovo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Associado.iml" filepath="$PROJECT_DIR$/Associado.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
