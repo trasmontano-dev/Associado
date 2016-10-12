@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -27,10 +26,8 @@ import retrofit.client.Response;
 public class RedeCredenciadaOrientadorInf extends AppCompatActivity {
 
     private Callback<List<String>> callbackEspecialidadesOrientadorWebApiMobile;
-    List<String> lstEspecialidades;
-    ArrayAdapter<String> adaptador;
+
     ListView lvInformacoes;
-    private Button btnVoltarInformacao;
     TextView tvNomeFantasiaInf;
     TextView tvCnpjCpfInf;
     TextView tvTipoAtendimentoInf;
@@ -39,7 +36,6 @@ public class RedeCredenciadaOrientadorInf extends AppCompatActivity {
     ScrollView scrInformacoes;
     private ArrayList Especialidades;
     private SpotsDialog spotsDialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,8 +82,6 @@ public class RedeCredenciadaOrientadorInf extends AppCompatActivity {
         new APIClient().getRestService().especialidadesOrientadorWebApiMobile(codCredenciado,codFilial,cdDescricao,callbackEspecialidadesOrientadorWebApiMobile);
 
     }
-
-
     private void callbackConfigureEspecialidades(int codigoCredenciado, int codigoFilial, int cdDescricao)
     {
         callbackEspecialidadesOrientadorWebApiMobile = new Callback<List<String>>() {
@@ -101,7 +95,6 @@ public class RedeCredenciadaOrientadorInf extends AppCompatActivity {
                 planosAdapter.setDropDownViewResource(android.R.layout.select_dialog_item);
                 lvInformacoes.setAdapter(planosAdapter);
                 this.setListViewHeightBasedOnChildren(lvInformacoes);
-
             }
             @Override
             public void failure(RetrofitError error) {
@@ -115,14 +108,12 @@ public class RedeCredenciadaOrientadorInf extends AppCompatActivity {
                     //pre-condition
                     return;
                 }
-
                 int totalHeight = 0;
                 for (int i = 0; i < listAdapter.getCount(); i++) {
                     View listItem = listAdapter.getView(i, null, listView);
                     listItem.measure(0, 0);
                     totalHeight += listItem.getMeasuredHeight();
                 }
-
                 ViewGroup.LayoutParams params = listView.getLayoutParams();
                 params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1)) + 20;
                 listView.setLayoutParams(params);
