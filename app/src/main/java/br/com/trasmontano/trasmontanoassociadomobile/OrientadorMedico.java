@@ -1,6 +1,8 @@
 package br.com.trasmontano.trasmontanoassociadomobile;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -72,7 +74,12 @@ public class OrientadorMedico extends AppCompatActivity implements Serializable 
     private OrientadorMedicoDTO municipio;
     private OrientadorMedicoDTO especialidade;
     private String nome;
+    private String pref;
     private SpotsDialog spotsDialog;
+
+    public static final String PREFS_NAME = "Preferences";
+    public static final String PlanoEscolhido = "Plano";
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +100,11 @@ public class OrientadorMedico extends AppCompatActivity implements Serializable 
         edtNomeCnpjFantasia = (EditText)findViewById(R.id.edtNomeCnpjFantasia);
         edtNumeroCnpj = (EditText)findViewById(R.id.edtNumeroCnpj);
         edtNumeroConselhoRegional = (EditText)findViewById(R.id.edtConselhoRegional);
+
+        sharedpreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        //Restaura as preferencias gravadas
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        pref = settings.getString(PlanoEscolhido,PlanoEscolhido);
 
         planos = new ArrayList();
         OrientadorMedicoDTO p = new OrientadorMedicoDTO();
@@ -163,6 +175,15 @@ public class OrientadorMedico extends AppCompatActivity implements Serializable 
                 codPlano = p.getCdCategoria().toString();
 
                 if (!codPlano.equals("-1")) {
+                    //Restaura as preferencias gravadas
+                    SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                    String pref = settings.getString(PlanoEscolhido, String.valueOf(spnPlano.getSelectedItemPosition()));
+
+                    if (!pref.equals("")) {
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString(PlanoEscolhido, String.valueOf(spnPlano.getSelectedItemPosition()));
+                        editor.commit();
+                    }
                     configurecallbackDescricaoDasRegioes(codPlano);
                     new APIClient().getRestService().getDescricaoDasRegioes(codPlano,callbackDescricaoDasRegioes);
                     spnRegiao.setEnabled(true);
@@ -352,6 +373,10 @@ public class OrientadorMedico extends AppCompatActivity implements Serializable 
                 ArrayAdapter planosAdapter = new ArrayAdapter(OrientadorMedico.this, android.R.layout.simple_spinner_item, planos);
                 planosAdapter.setDropDownViewResource(android.R.layout.select_dialog_item);
                 spnPlano.setAdapter(planosAdapter);
+                if (!pref.equals("-1"))
+                {
+                    spnPlano.setSelection(Integer.parseInt(pref));
+                }
             }
             public void failure(RetrofitError error) {
                 Log.d("ERRO-------->", error.getMessage().toString());
